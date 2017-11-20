@@ -96,196 +96,192 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
+html{
+    box-sizing: border-box
+}
+* *:before *:after{
+    box-sizing: border-box
+}
+header{
+    
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+.fa-bars{
+    font-size: 2em;
+    color: white;
+}
+h1,
+h2,
+h3,
+h4,{
+    font-size: 2em;
+    text-decoration: uppercase;
+    
+}
+img{
+    max-width: 100%;
+    
+}
+body{
+    padding-top: 3.25em;
+    margin:0 50px;
+}
+.page-header{
+    background: #000;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    
+}
+.page-header h1{
+    margin:0;
+}
+.page-header .main-nav{
     position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+    top: 1em;
+    right: 1em;
+}
+.page-section{
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+}
+.jumbotron{
+    background-image: url("images/purple-bg.jpeg" alt="purple");
+    padding: 0;
+    position:relative;
+}
+.jumbotron-content{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%)
+    line-height: 1em;
+}
+.main-image{
+position: relative;
+width: 100%;
+    z-index: -10;
+}
+.jumbotron-content h2{
+    position:absolute;
+    margin-top: 0;
+    margin-bottom:0;
+    left:-125px;
+    top:10px;
+     font-size: 3em;
+    text-align: center;
+    color: white;
+    
+}
+.btn{
+    border:0.125em solid white;
+        position:absolute;
+    top: 150px;
+    left:-60px;
+    color:#fff;
+padding: .5em 1.5em;
+font-size: 150%;
+border: .0625em solid #fff;
+text-decoration:none;
+    display: inline-block;
+}
+.btn:hover{
+    background: black;
+    color:white;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+.project-thumb{
+    width: 50%;
+    float: left;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
+.cafe{
+    width: 640px;
+    height: 480px;
+    position: relative;
+    z-index: -10;
+    
+}
+.museum{
+    width: 640px;
+    height: 480px;
+    position: relative;
+    z-index: -10;
+}
+.wildlife{
+    width: 640px;
+    height: 480px;
+    position: relative;
+    z-index: -10;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+.project-thumb .img{
+     background:hsla(360, 100%, 100%, 0.5);
+    position: relative;
+    z-index: -10;
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+
+    
+}
+.project-thumb h3{
+ margin-top: 0;
+margin-bottom: 0;
+border: 1px solid white;
+    color: black;
+position: absolute;
+text-align: center;
+    top: 50%
+    bottom: 50%
+    transform: translate (-50%, -50%)
+
+    
+}
+h3 a:hover{
+    color: #000;
+    background-color:#fff;
+    padding:0.625em;}
+
+
+.page-footer img{
+    width: 100%;
+
+}
+.contact{
+    color:white;
+    top:250px;
+    left:400px
+    
+}
+.button{
+    position: relative;
+    border: 1px solid white;
+    color: white;
+    top: 300px;
+    left: 600px
+
+    
 }
 
-.clearfix:after {
-    clear: both;
-}
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
 
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
 
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
 
-    thead {
-        display: table-header-group;
-    }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
+
+
+
+
